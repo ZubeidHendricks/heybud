@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "nodemon server/index.js",
     "start": "node server/index.js",
-    "test": "jest"
+    "test": "jest",
+    "db:migrate": "node server/db/migrations/001_initial_schema.js",
+    "postinstall": "npm run db:migrate"
   },
   "dependencies": {
     "@shopify/app-bridge": "^3.7.0",
@@ -16,7 +18,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "socket.io": "^4.6.1",
-    "socket.io-client": "^4.6.1"
+    "socket.io-client": "^4.6.1",
+    "pg": "^8.11.0",
+    "dotenv": "^16.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
