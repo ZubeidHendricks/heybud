@@ -1,0 +1,7 @@
+{% if shop.metafields.shared_shopping.enabled %}
+<div id="shared-shopping-widget" 
+     data-shop-id="{{ shop.id }}"
+     data-product-id="{{ product.id }}">
+  <script src="{{ 'shared-shopping.js' | asset_url }}" defer></script>
+</div>
+{% endif %}
