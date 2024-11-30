@@ -1,40 +1,51 @@
 # HeyBud - Shopify Shared Shopping Experience
 
-A Shopify app that enables real-time shared shopping experiences with voice chat and screen sharing capabilities.
+A real-time shared shopping application for Shopify stores.
 
 ## Features
 
-- Real-time screen sharing
-- Voice chat integration
-- Session management
-- Shopify Polaris UI components
-- WebSocket-based communication
+- Group Shopping Sessions
+- Real-time Communication
+- Split Payments
+- Price Tracking
+- Social Features
+- Analytics Dashboard
 
 ## Setup
 
-1. Install dependencies:
+1. Clone the repository:
+```bash
+git clone https://github.com/ZubeidHendricks/heybud.git
+```
+
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-2. Configure environment variables:
-```env
-SHOPIFY_API_KEY=your_api_key
-SHOPIFY_API_SECRET=your_api_secret
-SCOPES=read_products,write_products
-HOST=your_app_host
+3. Set up environment variables:
+```bash
+cp .env.example .env
 ```
 
-3. Start development server:
+4. Run development server:
 ```bash
 npm run dev
 ```
 
-## Structure
+## Deployment
 
-- `/app` - Frontend React components
-- `/server` - Backend Express server
-- `/snippets` - Shopify theme integration
+1. Deploy to Heroku:
+```bash
+git push heroku main
+```
+
+2. Set up environment variables in Heroku dashboard
+
+3. Run database migrations:
+```bash
+heroku run npm run db:migrate
+```
 
 ## License
 

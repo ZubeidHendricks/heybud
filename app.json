@@ -1,28 +1,30 @@
 {
   "name": "HeyBud",
-  "description": "Shared shopping experience Shopify app",
+  "description": "Shopify shared shopping experience app",
   "keywords": ["shopify", "shared-shopping", "nodejs"],
   "env": {
     "SHOPIFY_API_KEY": {
       "description": "Your Shopify API key",
-      "required": true
+      "value": "5351bace72dd948c03e7d352391a4cf3"
     },
     "SHOPIFY_API_SECRET": {
       "description": "Your Shopify API secret",
-      "required": true
-    },
-    "SCOPES": {
-      "description": "Shopify API scopes",
-      "value": "read_products,write_products"
+      "value": "90c12a9fd6f58d50756b10fc1d47b658"
     },
     "HOST": {
       "description": "App host URL",
-      "required": true
+      "value": "https://heybud-app.herokuapp.com"
     }
+  },
+  "scripts": {
+    "postdeploy": "npm run db:migrate"
   },
   "buildpacks": [
     {
       "url": "heroku/nodejs"
     }
+  ],
+  "addons": [
+    "heroku-postgresql"
   ]
 }
